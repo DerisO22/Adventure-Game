@@ -16,6 +16,7 @@ canvas {
     height: 100vh;
     background-image: var(--bg-image);
     background-repeat: none;
+    background-size: contain;
 }
 .container {
     position: absolute;
