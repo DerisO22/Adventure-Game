@@ -1,4 +1,14 @@
+/* Different Background Images */
+:root {
+    --bg-image: url('https://img.freepik.com/premium-photo/pixel-art-classroom-with-5-students-working-desks_36682-100052.jpg?w=360');
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ff91;
+}
+
 body {
+    background: var(--bg-image);
     margin: 0;
     overflow: hidden;
 }
