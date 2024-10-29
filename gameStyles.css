@@ -1,6 +1,6 @@
 /* Different Background Images */
 :root {
-    --bg-image: url('https://img.freepik.com/premium-photo/pixel-art-classroom-with-5-students-working-desks_36682-100052.jpg?w=360');
+    --bg-image: url('https://png.pngtree.com/png-clipart/20230913/original/pngtree-empty-classroom-png-image_11061707.png');
     --bg-color: #080808;
     --second-bg-color: #131313;
     --text-color: white;
@@ -15,6 +15,7 @@ canvas {
     width: 100%;
     height: 100vh;
     background-image: var(--bg-image);
+    background-repeat: none;
 }
 .container {
     position: absolute;
