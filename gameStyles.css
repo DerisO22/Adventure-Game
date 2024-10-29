@@ -8,7 +8,7 @@
 }
 
 body {
-    background: var(--bg-image);
+    background-image: var(--bg-image);
     margin: 0;
     overflow: hidden;
 }
