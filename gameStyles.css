@@ -1,15 +1,21 @@
-/* Different Background Images */
+/* Different Colors */
 :root { 
-    --secondary-font: "arial";
     --bg-color: #080808;
     --second-bg-color: white;
     --text-color: azure;
     --main-color: black;
 }
 
+/* Main Font */
 @font-face {
     font-family: mainFont;
     src: url('chalk-dash-font/ChalkDash-vPYM.ttf');
+}
+
+/* Secondary Font */
+@font-face {
+    font-family: secondaryFont;
+    src: url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 }
 
 * {
@@ -39,7 +45,7 @@ canvas {
 }
 
 #gameTitle {
-    font-family: sans-serif;
+    font-family: secondaryFont;
     letter-spacing: 5px;
     margin-top: 5rem;
     font-size: 3rem;
@@ -88,7 +94,7 @@ button {
     color: var(--text-color);
     letter-spacing: 5px;
     font-size: 3rem;
-    font-family: sans-serif;
+    font-family: secondaryFont;
 }
 
 .homeBottomContainer #groupInformation {
