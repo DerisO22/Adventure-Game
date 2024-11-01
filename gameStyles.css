@@ -1,70 +1,144 @@
 /* Different Background Images */
-:root {
-    --page-font: 
+:root { 
+    --secondary-font: "arial";
     --bg-color: #080808;
-    --second-bg-color: #131313;
-    --text-color: white;
-    --main-color: #00ff91;
+    --second-bg-color: white;
+    --text-color: azure;
+    --main-color: black;
 }
 
-body{
+@font-face {
+    font-family: mainFont;
+    src: url('chalk-dash-font/ChalkDash-vPYM.ttf');
+}
+
+* {
+    font-family: mainFont;
+    color: var(--text-color);
+}
+
+body {
+    user-select: none;
     margin: 0;
     overflow: hidden;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 canvas {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: var(--main-color);
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
 	height: 100vh;
     width: 100%;
-    border: 2px solid turquoise;
 }
 
 .pageContainer {
-    display: inline-block;
     position: absolute;
     width: 100%;
     height: 100vh;
     text-align: center;
 }
 
+#gameTitle {
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+
 .homeStartContainer {
-    
+    width: 100%;
+    height: fit-content;
+    margin-top: 4rem;
 }
 
 button {
     border-radius: 10px;
     padding: 2rem 1rem 2rem 1rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: mainFont;
 }
 
 #startButton {
-    max-width: 70%;
+    max-width: 60%;
     font-size: 4rem;
+    font-weight: 0;
     border: 1px solid black;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: var(--main-color);
 }
 
 #startButton {
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 #startButton:hover {
     transform: scale(1.2) rotate(7deg);
     background-color: black;
-    color: azure;
+    color: rgb(80, 229, 252);
 }
 
+.homeBottomContainer {
+    width: 100%;
+    height: fit-content;
+    margin-top: 4rem;
+    color: var(--text-color);
+}
+
+.homeBottomContainer #gameName{
+    width: 100%;
+    margin-top: 2rem;
+    color: var(--text-color);
+    letter-spacing: 5px;
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+
+.homeBottomContainer #groupInformation {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: rgb(79, 172, 67);
+}
+
+.derisHover {
+    color: aquamarine;
+    transition: color 0.2s ease-in-out;
+}
+
+.derisHover:hover {
+    color: rgb(0, 76, 255);
+}
+
+.aydenHover {
+    color: rgb(127, 131, 255);
+    transition: color 0.2s ease-in-out;
+}
+
+.aydenHover:hover {
+    color:crimson;
+}
+
+.malakaiHover {
+    color: rgb(253, 85, 85);
+    transition: color 0.2s ease-in-out;
+}
+
+.malakaiHover:hover {
+    color: rgb(100, 255, 80);
+}
+
+.kaylahHover {
+    color: rgb(236, 253, 85);
+    transition: color 0.2s ease-in-out;
+}
+
+.kaylahHover:hover {
+    color: rgb(133, 80, 255);
+}
+
+.willHover {
+    color: rgb(48, 162, 40);
+    transition: color 0.2s ease-in-out;
+}
+
+.willHover:hover {
+    color: rgb(255, 138, 80);
+}
