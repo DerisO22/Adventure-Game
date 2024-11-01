@@ -24,9 +24,16 @@
 }
 
 body {
+    background-color: var(--main-color);
     user-select: none;
     margin: 0;
     overflow: hidden;
+    animation: grow 3s;
+}
+
+@keyframes grow {
+    0% {transform: scale(.2) rotate(30deg);}
+    100% {transform: scale(1) rotate(0deg);}
 }
 
 canvas {
@@ -49,6 +56,26 @@ canvas {
     letter-spacing: 5px;
     margin-top: 5rem;
     font-size: 3rem;
+    position: relative; /* Add position relative for absolute positioning of pseudo-elements */
+}
+#gameTitle::before {
+    content: '';
+    width: 150px;
+    height: 2px;
+    background: var(--text-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-115%); /* Vertically center the line */
+
+}
+#gameTitle::after {
+    content: '';
+    width: 150px;
+    height: 2px;
+    background: var(--text-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(12%); /* Vertically center the line */
 }
 
 .homeStartContainer {
@@ -68,16 +95,17 @@ button {
     font-size: 4rem;
     font-weight: 0;
     border: 1px solid black;
-    background-color: var(--main-color);
+    background: none;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-#startButton {
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+#startButton.active {
+    transform: scale(1.8);
+    background-color: azure;
 }
 
 #startButton:hover {
     transform: scale(1.2) rotate(7deg);
-    background-color: black;
     color: rgb(80, 229, 252);
 }
 
@@ -88,13 +116,34 @@ button {
     color: var(--text-color);
 }
 
-.homeBottomContainer #gameName{
+#gameName{
     width: 100%;
     margin-top: 2rem;
     color: var(--text-color);
     letter-spacing: 5px;
     font-size: 3rem;
     font-family: secondaryFont;
+    position: relative;
+}
+
+#gameName::before {
+    content: '';
+    width: 150px;
+    height: 2px;
+    background: var(--text-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%) translateX(-115%); /* Vertically center the line */
+
+}
+#gameName::after {
+    content: '';
+    width: 150px;
+    height: 2px;
+    background: var(--text-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%) translateX(12%); /* Vertically center the line */
 }
 
 .homeBottomContainer #groupInformation {
@@ -104,47 +153,61 @@ button {
     color: rgb(79, 172, 67);
 }
 
+#by {
+    font-size: 1.5rem;
+}
+
 .derisHover {
     color: aquamarine;
-    transition: color 0.2s ease-in-out;
+    font-size: 1.5rem;
+    transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .derisHover:hover {
     color: rgb(0, 76, 255);
+    font-size: 2rem;
 }
 
 .aydenHover {
     color: rgb(127, 131, 255);
-    transition: color 0.2s ease-in-out;
+    font-size: 1.5rem;
+    transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .aydenHover:hover {
     color:crimson;
+    font-size: 2rem;
 }
 
 .malakaiHover {
     color: rgb(253, 85, 85);
-    transition: color 0.2s ease-in-out;
+    font-size: 1.5rem;
+    transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .malakaiHover:hover {
     color: rgb(100, 255, 80);
+    font-size: 2rem;
 }
 
 .kaylahHover {
     color: rgb(236, 253, 85);
-    transition: color 0.2s ease-in-out;
+    font-size: 1.5rem;
+    transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .kaylahHover:hover {
     color: rgb(133, 80, 255);
+    font-size: 2rem;
 }
 
 .willHover {
     color: rgb(48, 162, 40);
-    transition: color 0.2s ease-in-out;
+    font-size: 1.5rem;
+    transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .willHover:hover {
     color: rgb(255, 138, 80);
+    font-size: 2rem;
 }
