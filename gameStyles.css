@@ -62,7 +62,7 @@ canvas {
     content: '';
     width: 150px;
     height: 2px;
-    background: var(--text-color);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(84, 255, 204), var(--text-color));
     position: absolute;
     top: 50%;
     transform: translateY(-50%) translateX(-115%); /* Vertically center the line */
@@ -72,7 +72,7 @@ canvas {
     content: '';
     width: 150px;
     height: 2px;
-    background: var(--text-color);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(84, 255, 204), var(--text-color));
     position: absolute;
     top: 50%;
     transform: translateY(-50%) translateX(12%); /* Vertically center the line */
@@ -130,7 +130,7 @@ button {
     content: '';
     width: 150px;
     height: 2px;
-    background: var(--text-color);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(84, 255, 204), var(--text-color));
     position: absolute;
     top: 50%;
     transform: translateY(-100%) translateX(-115%); /* Vertically center the line */
@@ -140,7 +140,7 @@ button {
     content: '';
     width: 150px;
     height: 2px;
-    background: var(--text-color);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(84, 255, 204), var(--text-color));
     position: absolute;
     top: 50%;
     transform: translateY(-100%) translateX(12%); /* Vertically center the line */
