@@ -87,7 +87,7 @@ if(pageNum == 0){
 
     smileImg.style.position = 'absolute';
     smileImg.style.top = '12vh';
-    smileImg.style.left = '2rem';
+    smileImg.style.left = '6rem';
     smileImg.style.zIndex = '1';
     smileImg.style.transform = "rotate(50deg) scale(0.6)"
     // 5. Add image to the body
@@ -103,7 +103,7 @@ if(pageNum == 0){
 
     moneyImg.style.position = 'absolute';
     moneyImg.style.top = '63vh';
-    moneyImg.style.left = '0%';
+    moneyImg.style.left = '4%';
     moneyImg.style.zIndex = '1';
     moneyImg.style.transform = "rotate(-20deg) scale(0.6)"
     // 5. Add image to the body
