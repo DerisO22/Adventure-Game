@@ -51,6 +51,8 @@ canvas {
     text-align: center;
 }
 
+/* First Page */
+
 #gameTitle {
     font-family: secondaryFont;
     letter-spacing: 5px;
@@ -91,7 +93,7 @@ button {
 }
 
 #startButton {
-    max-width: 60%;
+    max-width: 100%;
     font-size: 4rem;
     font-weight: 0;
     border: 1px solid black;
@@ -210,4 +212,55 @@ button {
 .willHover:hover {
     color: rgb(255, 138, 80);
     font-size: 2rem;
+}
+
+/* Second Page */
+.introduceJohnContainer {
+    font-family: secondaryFont;
+    letter-spacing: 5px;
+    margin-top: 5rem;
+    font-size: 3rem;
+    text-align: center;
+    position: relative; /* Add position relative for absolute positioning of pseudo-elements */
+}
+
+#jonText {
+    color: rgba(127, 255, 212, 0.47);
+}
+
+#introduceJohnButton {
+    max-width: 80%;
+    font-size: 4rem;
+    font-weight: 0;
+    border: 1px solid black;
+    background: none;
+    transition: transform 0.1s ease-in-out, color 0.3s ease-in-out, scale .3s ease-in-out;
+}
+
+#introduceJohnButton:active {
+    transform: translateY(10px);
+}
+
+#introduceJohnButton:hover {
+    scale: 1.1;
+    color: rgb(103, 219, 87);
+}
+
+#typeText {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: secondaryFont;
+}
+
+.jonImage {
+    width: 20rem;
+    transition: box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
+}
+
+.jonImage:hover {
+    scale: 1.1;
+    box-shadow: 0 0 0 10px var(--second-bg-color);
+    src: "assets/think_sprite.png";
 }

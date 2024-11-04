@@ -50,7 +50,8 @@ if(pageNum == 0){
         // 2. Delay before redirecting:
         setTimeout(() => {
         // 3. Redirect to next page:
-            window.location.href = "#"; // Replace with your next page
+            window.location.href = "chooseCharPage.html"; // Replace with your next page
+            pageNum == 1;
         }, 500); // 500 milliseconds delay
 
         // 4. Reset button size:
@@ -109,20 +110,6 @@ if(pageNum == 0){
     // 5. Add image to the body
     document.body.appendChild(moneyImg);
     }
-
-
-}
-/**
- * Choose Character Page
- */
-else if(pageNum = 1){
-
-}
-/**
- * Actual Game With Two-Sided Ethical Questions
- */
-else if(pageNum = 3){
-
 }
 
 const circleRadius = 0.5;
