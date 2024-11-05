@@ -9,27 +9,83 @@ let pageNum = 0;
 
 // Choose Character Variables
 let chooseCharacterContainer = document.querySelector('.chooseCharacterContainer')
+let welcomeButton = document.getElementById("introduceJonButton")
+let continueButton = document.getElementById("continueButton")
+document.getElementById("continueButton").style.display = "none"
 
 let init = () => {
     // Block Everything Not Page 1 and then progressively unhide
     chooseCharacterContainer.style.display = 'none';
 }
 
+let textIndex = -1;
+let typing = false
 // Introduce Jon and possibly mutiple Characters
-let txt="Hello, My Name is Jon"
+let txt = [
+  "Hello, my name is Jon",
+  "I'll be guiding you through ethical questions about college",
+  "Let's Begin"
+]
 let i = 0;
 let speed = 90; /* The speed/duration of the effect in milliseconds */
+let jonImage = document.querySelector(".jonImage")
+let shakeIntensity = 2;
+let shakeDirection = 1;
 
 function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("typeText").innerHTML += txt.charAt(i);
+  if (i < txt[textIndex].length) {
+    document.getElementById("typeText").innerHTML += txt[textIndex].charAt(i);
+    jonImage.style.transform = `translateY(${shakeIntensity * shakeDirection}px)`;
+    shakeDirection *= -1;
     i++;
     setTimeout(typeWriter, speed);
+  } else {
+    shakeDirection = 1;
+    jonImage.style.transform = 'translateY(0)';
+    typing = false
+    i = 0;
   }
 }
 
+welcomeButton.addEventListener('click', () => {
+  if(!typing){
+    document.getElementById('typeText').innerHTML = "";
+    textIndex++;
+  }
+  console.log("CLICKED")
+  if(!typing && textIndex != 3){
+    typing = true;
+    typeWriter();
+  }
+  //Next Page
+  if(textIndex == 3){
+    document.getElementById("continueButton").style.display = "block"
+  }
+})
+
+continueButton.addEventListener('click', () => {
+  // 1. Grow animation:
+  continueButton.style.transform = 'scale(100)'; // Increase size
+  
+  // 2. Delay before redirecting:
+  setTimeout(() => {
+  // 3. Redirect to next page:
+      window.location.href = "question.html"; // Replace with your next page
+      pageNum == 1;
+  }, 500); // 500 milliseconds delay
+
+  // 4. Reset button size:
+  setTimeout(() => {
+      continueButton.style.transform = 'scale(1)'; // Reset size
+  }, 1000); // 1 second delay (after the redirect)
+});
 
 
+
+
+/**
+ * Animation Background
+ */
 const circleRadius = 0.5; 
 const circleSpeed = 2; 
 // Array to hold circles

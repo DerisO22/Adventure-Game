@@ -228,7 +228,7 @@ button {
     color: rgba(127, 255, 212, 0.47);
 }
 
-#introduceJohnButton {
+#introduceJonButton {
     max-width: 80%;
     font-size: 4rem;
     font-weight: 0;
@@ -237,11 +237,11 @@ button {
     transition: transform 0.1s ease-in-out, color 0.3s ease-in-out, scale .3s ease-in-out;
 }
 
-#introduceJohnButton:active {
+#introduceJonButton:active {
     transform: translateY(10px);
 }
 
-#introduceJohnButton:hover {
+#introduceJonButton:hover {
     scale: 1.1;
     color: rgb(103, 219, 87);
 }
@@ -263,4 +263,32 @@ button {
     scale: 1.1;
     box-shadow: 0 0 0 10px var(--second-bg-color);
     src: "assets/think_sprite.png";
+}
+
+#continueButton {
+    margin: auto;
+    max-width: 80%;
+    font-size: 4rem;
+    font-weight: 0;
+    border: 1px solid black;
+    background: none;
+    transition: transform 0.1s ease-in-out, color 0.3s ease-in-out, scale .3s ease-in-out;
+}
+
+#continueButton:active {
+    transform: translateY(10px);
+}
+
+#continueButton:hover {
+    scale: 1.1;
+    color: rgb(103, 219, 87);
+}
+
+#continueButton:active {
+    transition: transform 0.6s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#continueButton:active {
+    transform: scale(1.8);
+    background-color: azure;
 }
