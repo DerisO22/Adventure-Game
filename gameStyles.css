@@ -303,7 +303,7 @@ button {
 }
 
 .topText {
-    font-size: 3rem;
+    font-size: 2rem;
     color: rgb(75, 189, 217);
 }
 
@@ -312,7 +312,7 @@ button {
 }
 
 #choice1 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     max-width: 25%;
     margin-right: 3%;
     color: #6a83ce;
@@ -320,7 +320,7 @@ button {
 }
 
 #choice2 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     max-width: 25%;
     margin-right: 3%;
     color: #c45fa7;
@@ -328,7 +328,7 @@ button {
 }
 
 #choice3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     max-width: 25%;
     color: #4a9c68;
     transition: transform 0.3s ease-in-out;
@@ -351,9 +351,9 @@ button {
 }
 
 .scenarioText {
-    margin: 30px 10% 40px 10%;
+    margin: 10px 10% 20px 10%;
     line-height: 2rem;
     max-width: 100%;
     font-family: secondaryFont;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
