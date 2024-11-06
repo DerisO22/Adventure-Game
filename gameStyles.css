@@ -335,13 +335,13 @@ button {
 }
 
 #choice1:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 #choice2:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 #choice3:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 
 .widthChange {
