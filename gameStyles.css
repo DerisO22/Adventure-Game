@@ -292,3 +292,68 @@ button {
     transform: scale(1.8);
     background-color: azure;
 }
+
+/* Third Page */
+.pageContent {
+    margin-top: 5vh;
+    width: 100%;
+    position: absolute;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.topText {
+    font-size: 3rem;
+    color: rgb(75, 189, 217);
+}
+
+.buttonContainer {
+    margin-top: 5%;
+}
+
+#choice1 {
+    font-size: 1.5rem;
+    max-width: 25%;
+    margin-right: 3%;
+    color: #6a83ce;
+    transition: transform 0.3s ease-in-out;
+}
+
+#choice2 {
+    font-size: 1.5rem;
+    max-width: 25%;
+    margin-right: 3%;
+    color: #c45fa7;
+    transition: transform 0.3s ease-in-out;
+}
+
+#choice3 {
+    font-size: 1.5rem;
+    max-width: 25%;
+    color: #4a9c68;
+    transition: transform 0.3s ease-in-out;
+}
+
+#choice1:hover {
+    transform: scale(1.3);
+}
+#choice2:hover {
+    transform: scale(1.3);
+}
+#choice3:hover {
+    transform: scale(1.3);
+}
+
+.widthChange {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.scenarioText {
+    margin: 30px 10% 40px 10%;
+    line-height: 2rem;
+    max-width: 100%;
+    font-family: secondaryFont;
+    font-size: 1.8rem;
+}
