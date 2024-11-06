@@ -316,7 +316,7 @@ button {
     max-width: 25%;
     margin-right: 3%;
     color: #6a83ce;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 #choice2 {
@@ -324,24 +324,24 @@ button {
     max-width: 25%;
     margin-right: 3%;
     color: #c45fa7;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 #choice3 {
     font-size: 1.1rem;
     max-width: 25%;
     color: #4a9c68;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 #choice1:hover {
-    transform: scale(1.4);
+    transform: scale(1.45);
 }
 #choice2:hover {
-    transform: scale(1.4);
+    transform: scale(1.45);
 }
 #choice3:hover {
-    transform: scale(1.4);
+    transform: scale(1.45);
 }
 
 .widthChange {
