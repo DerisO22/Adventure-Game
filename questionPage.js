@@ -75,7 +75,7 @@ let choice3s = [
 let ethicalImages = [
   "assets/sad_sprite.png",
   "assets/happi_sprite.png",
-  "assets/upset_sprite.png",
+  "assets/upset_sprite.png",//??
   "assets/game_sprited.png",
   "assets/think_sprite.png"
 ];
