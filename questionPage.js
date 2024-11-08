@@ -85,7 +85,7 @@ let typing = false
 // Introduce Jon and possibly mutiple Characters
 
 let i = 0;
-let speed = 90; /* The speed/duration of the effect in milliseconds */
+let speed = 90;
 let jonImage = document.querySelector(".jonImage")
 let shakeIntensity = 2;
 let shakeDirection = 1;
@@ -106,6 +106,10 @@ function typeWriter() {
 }
 
 jonContinueButton.addEventListener('click', () => {
+  if(textIndex == 9){
+    console.log("Wtf")
+    window.location.href = "endPage.html"
+  }
   if(textIndex == -1){
     topicText.innerHTML = scenarioTopic[textIndex+1]
   }
@@ -114,8 +118,7 @@ jonContinueButton.addEventListener('click', () => {
     document.querySelector('.scenarioText').innerHTML = "";
     textIndex++;
   }
-  console.log(textIndex)
-  if(!typing && textIndex != 11){
+  if(!typing && textIndex != 10){
     typing = true;
     typeWriter();
   }
@@ -163,7 +166,6 @@ function update() {
     drawCircle(circle);
     return true;
   });
-
   /**
  * Answers 
  */
@@ -216,8 +218,8 @@ switch(textIndex){
 
     //Button 1
     button1.addEventListener("mouseover", () => {
-      jonImage.src = ethicalImages[2];
-      jonImage.style.borderBottom = "3px solid red"
+      jonImage.src = ethicalImages[1];
+      jonImage.style.borderBottom = "3px solid yellow"
     });
     button1.addEventListener("mouseout", () => {
       jonImage.src = ethicalImages[4]; 
@@ -236,8 +238,8 @@ switch(textIndex){
 
     //Button 3
     button3.addEventListener("mouseover", () => {
-      jonImage.src = ethicalImages[1]
-      jonImage.style.borderBottom = "3px solid yellow"
+      jonImage.src = ethicalImages[2]
+      jonImage.style.borderBottom = "3px solid red"
     });
     button3.addEventListener("mouseout", () => {
       jonImage.src = ethicalImages[3];

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Adventure</title>
+    <style>
+        :root { 
+    --bg-color: #080808;
+    --second-bg-color: white;
+    --text-color: azure;
+    --main-color: black;
+        }
+
+        /* Main Font */
+        @font-face {
+            font-family: mainFont;
+            src: url('chalk-dash-font/ChalkDash-vPYM.ttf');
+        }
+
+        /* Secondary Font */
+        @font-face {
+            font-family: secondaryFont;
+            src: url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+        }
+
+        * {
+            font-family: mainFont;
+            color: var(--text-color);
+        }
+
+        body {
+            background-color: var(--main-color);
+            user-select: none;
+            margin: 0;
+            overflow: hidden;
+            animation: grow 1s;
+        }
+        @keyframes grow {
+            0% {transform: scale(.2) rotate(30deg);}
+            100% {transform: scale(1) rotate(0deg);}
+        }
+        .content--canvas {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+        }
+        .pageContainer {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            text-align: center;
+            z-index: 10;
+        }
+        .endContainer {
+            display: flex;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50vh;
+        }
+        .end {
+            position: relative;
+            font-size: 5em; /* Adjust font size as needed */
+            font-weight: bold;
+            color: #ffffff; /* Adjust color as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="pageContainer">
+        <div class="endContainer">
+            <p style="position: absolute; " class="end">The End</p>
+        </div>
+    </div>
+    <div class="content--canvas"></div>
+    <script src="endScript.js"></script>
+</body>
+</html>
