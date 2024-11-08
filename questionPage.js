@@ -531,8 +531,8 @@ switch(textIndex){
   requestAnimationFrame(update); // Request the next frame
 }
 // Spawn a new circle
-setInterval(() => {
-  circles.push(createCircle());
-}, 100);
+// setInterval(() => {
+//   circles.push(createCircle());
+// }, 100);
 // Initialize animation
 update();
