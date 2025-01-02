@@ -1,11 +1,11 @@
-const particleCount = 700;
+const particleCount = 70;
 const particlePropCount = 9;
 const particlePropsLength = particleCount * particlePropCount;
 const baseTTL = 100;
 const rangeTTL = 500;
 const baseSpeed = 0.1;
 const rangeSpeed = 1;
-const baseSize = 2;
+const baseSize = 30;
 const rangeSize = 10;
 const baseHue = 10;
 const rangeHue = 100;
@@ -13,7 +13,14 @@ const noiseSteps = 2;
 const xOff = 0.0025;
 const yOff = 0.005;
 const zOff = 0.0005;
-const backgroundColor = 'hsla(60,50%,3%,1)';
+const backgroundColor = 'hsla(60,10%,1%,1)';
+
+let images = [new Image(), new Image(), new Image(), new Image(), new Image()]
+images[0].src = "assets/happi_sprite.png";
+images[1].src = "assets/think_sprite.png";
+images[2].src = "assets/sad_sprite.png";
+images[3].src = "assets/questionMark.png";
+images[4].src = "assets/exclamation.png";
 
 let container;
 let canvas;
@@ -113,6 +120,7 @@ function drawParticle(x, y, theta, life, ttl, size, hue) {
   ctx.a.translate(xRel, yRel);
   ctx.a.rotate(theta);
   ctx.a.translate(-xRel, -yRel);
+  ctx.a.drawImage(images[0], xRel, yRel, size, size);
   ctx.a.strokeRect(xRel, yRel, size, size);
   ctx.a.closePath();
   ctx.a.restore();
@@ -158,14 +166,14 @@ function resize() {
 
 function renderGlow() {
   ctx.b.save();
-  ctx.b.filter = 'blur(8px) brightness(200%)';
-  ctx.b.globalCompositeOperation = 'lighter';
+  // ctx.b.filter = 'blur(8px) brightness(200%)';
+  // ctx.b.globalCompositeOperation = 'lighter';
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
 
   ctx.b.save();
-  ctx.b.filter = 'blur(4px) brightness(200%)';
-  ctx.b.globalCompositeOperation = 'lighter';
+  // ctx.b.filter = 'blur(4px) brightness(200%)';
+  // ctx.b.globalCompositeOperation = 'lighter';
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
 }

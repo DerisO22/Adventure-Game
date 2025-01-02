@@ -27,7 +27,7 @@ let txt = [
   "Let's Begin"
 ]
 let i = 0;
-let speed = 90; /* The speed/duration of the effect in milliseconds */
+let speed = 90; 
 let jonImage = document.querySelector(".jonImage")
 let shakeIntensity = 2;
 let shakeDirection = 1;
@@ -65,14 +65,14 @@ welcomeButton.addEventListener('click', () => {
 
 continueButton.addEventListener('click', () => {
   // 1. Grow animation:
-  continueButton.style.transform = 'scale(100)'; // Increase size
+  continueButton.style.transform = 'scale(1000)'; // Increase size
   
   // 2. Delay before redirecting:
   setTimeout(() => {
   // 3. Redirect to next page:
       window.location.href = "question.html"; // Replace with your next page
       pageNum == 1;
-  }, 500); // 500 milliseconds delay
+  }, 1000); // 500 milliseconds delay
 
   // 4. Reset button size:
   setTimeout(() => {
