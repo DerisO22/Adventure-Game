@@ -58,7 +58,7 @@ canvas {
     letter-spacing: 5px;
     margin-top: 5rem;
     font-size: 3rem;
-    position: relative; /* Add position relative for absolute positioning of pseudo-elements */
+    position: relative; 
 }
 #gameTitle::before {
     content: '';
@@ -67,7 +67,7 @@ canvas {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(84, 255, 204), var(--text-color));
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) translateX(-115%); /* Vertically center the line */
+    transform: translateY(-50%) translateX(-115%); 
 
 }
 #gameTitle::after {
@@ -77,7 +77,7 @@ canvas {
     background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(84, 255, 204), var(--text-color));
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) translateX(12%); /* Vertically center the line */
+    transform: translateY(-50%) translateX(12%); 
 }
 
 .homeStartContainer {
@@ -135,8 +135,7 @@ button {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(84, 255, 204), var(--text-color));
     position: absolute;
     top: 50%;
-    transform: translateY(-100%) translateX(-115%); /* Vertically center the line */
-
+    transform: translateY(-100%) translateX(-115%); 
 }
 #gameName::after {
     content: '';
@@ -145,7 +144,7 @@ button {
     background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(84, 255, 204), var(--text-color));
     position: absolute;
     top: 50%;
-    transform: translateY(-100%) translateX(12%); /* Vertically center the line */
+    transform: translateY(-100%) translateX(12%); 
 }
 
 .homeBottomContainer #groupInformation {
@@ -221,7 +220,7 @@ button {
     margin-top: 5rem;
     font-size: 3rem;
     text-align: center;
-    position: relative; /* Add position relative for absolute positioning of pseudo-elements */
+    position: relative; 
 }
 
 #jonText {
@@ -302,7 +301,22 @@ button {
     text-align: center;
 }
 
+.pageContent .barContainer {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.pageContent .barContainer .ethicsBar {
+    background-color: gray;
+    transition: width 0.3s ease-in;
+    font-size: 10px;
+}
+
 .topText {
+    width: 80%;
+    margin: auto;
     font-size: 2rem;
     color: rgb(75, 189, 217);
 }
@@ -359,7 +373,6 @@ button {
 }
 
 /* End Page */
-
 .content--canvas {
     position: fixed;
     top: 0;
@@ -385,9 +398,9 @@ button {
   }
   .end {
       position: relative;
-      font-size: 5em; /* Adjust font size as needed */
+      font-size: 5em; 
       font-weight: bold;
-      color: #ffffff; /* Adjust color as needed */
+      color: #ffffff; 
       background-color: rgb(1, 1, 1);
       opacity: .5;
       padding: 10px;

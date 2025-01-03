@@ -8,6 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
     </style>
     <link rel="stylesheet" href="gameStyles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
     <div class="pageContainer">
@@ -17,6 +18,12 @@
                 <p class="scenarioText"></p>
             </div>
             <img src="assets/game_sprited.png" alt="Jon" class="jonImage">
+            <!--Measure Ethics Bar-->
+            <div class="barContainer">
+                <div class="w3-border">
+                    <div id="ethicsBar" style="height:40px;width:10%"></div>
+                </div>
+            </div>
 
             <div class="buttonContainer">
                 <button id="choice1">Choice 1</button>
@@ -26,6 +33,7 @@
         </div>
     </div>
     <canvas id="myCanvas"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="questionPage.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@ let pageNum = 0;
 
 // Choose Character Variables
 let chooseCharacterContainer = document.querySelector('.chooseCharacterContainer')
-let welcomeButton = document.getElementById("introduceJonButton")
+let welcomeButton = document.querySelector(".jonImage")
 let continueButton = document.getElementById("continueButton")
 document.getElementById("continueButton").style.display = "none"
 
@@ -23,8 +23,8 @@ let typing = false
 // Introduce Jon and possibly mutiple Characters
 let txt = [
   "Hello, my name is Jon",
-  "I'll be guiding you through ethical questions about college",
-  "Let's Begin"
+  "I'll be guiding you through ethical scenarios relating to college",
+  "Let's Begin!"
 ]
 let i = 0;
 let speed = 90; 
@@ -63,41 +63,36 @@ welcomeButton.addEventListener('click', () => {
   }
 })
 
+// Scale animation to next page
 continueButton.addEventListener('click', () => {
-  // 1. Grow animation:
-  continueButton.style.transform = 'scale(1000)'; // Increase size
+  continueButton.style.transform = 'scale(1000)'; 
   
-  // 2. Delay before redirecting:
   setTimeout(() => {
-  // 3. Redirect to next page:
-      window.location.href = "question.html"; // Replace with your next page
+      window.location.href = "question.html"; 
       pageNum == 1;
-  }, 1000); // 500 milliseconds delay
-
-  // 4. Reset button size:
+  }, 1000); 
+  
   setTimeout(() => {
-      continueButton.style.transform = 'scale(1)'; // Reset size
-  }, 1000); // 1 second delay (after the redirect)
+      continueButton.style.transform = 'scale(1)'; 
+  }, 1000); 
 });
-
-
 
 
 /**
  * Animation Background
  */
-const circleRadius = 0.5; 
+const circleRadius = .75; 
 const circleSpeed = 2; 
-// Array to hold circles
 let circles = [];
-// Function to create a new circle
+
+// Create Circles
 function createCircle() {
-  let r = Math.floor(Math.random() * 256); // Random value for red (0-255)
-  let g = Math.floor(Math.random() * 256); // Random value for green (0-255)
-  let b = Math.floor(Math.random() * 256); // Random value for blue (0-255)
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256); 
+  let b = Math.floor(Math.random() * 256); 
 
   const x = Math.random() * canvas.width;
-  const y = Math.random() * -circleRadius; // Start off-screen
+  const y = Math.random() * -circleRadius;
   return {
     x,
     y,
@@ -106,33 +101,36 @@ function createCircle() {
     speed: circleSpeed
   };
 }
-// Function to draw a circle
+
+// Draw Circle
 function drawCircle(circle) {
   ctx.beginPath();
   ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
   ctx.fillStyle = circle.color;
   ctx.fill();
 }
-// Function to update circle positions and draw
+
+// Update and Draw Circle
 function update() {
-  // Clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  // Update circle positions and remove off-screen circles
+
   circles = circles.filter((circle, index) => {
     circle.y += circle.speed;
-    // If circle is off-screen, return false to filter it out
+
+    // Delete circle if off the screen at bottom
     if (circle.y > canvas.height + circle.radius) {
       return false;
     } 
-    // Otherwise, draw the circle and return true to keep it
+
     drawCircle(circle);
     return true;
   });
-  requestAnimationFrame(update); // Request the next frame
+  requestAnimationFrame(update); 
 }
+
 // Spawn a new circle
 setInterval(() => {
   circles.push(createCircle());
 }, 100);
-// Initialize animation
+
 update();
