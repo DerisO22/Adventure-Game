@@ -254,7 +254,7 @@ button {
 }
 
 .jonImage {
-    width: 20rem;
+    width: 20%;
     transition: box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
 
@@ -322,7 +322,7 @@ button {
 }
 
 .buttonContainer {
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 #choice1 {
