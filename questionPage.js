@@ -36,7 +36,7 @@ let scenarios = [
 ];
 
 let choice1s = [
-  "Defend the accused student by reporting what you saw",
+  "Defend your friend by lying to the clerk about what you saw",
   "Confront them directly and ask them to stop",
   "Accept the answers to pass the exam",
   "Let them have the credit to keep peace in the group",
