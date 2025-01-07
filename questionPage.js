@@ -194,7 +194,7 @@ function typeWriter() {
 jonContinueButton.addEventListener('click', () => {
   if(textIndex > -2){
     if(textIndex === 9){
-      console.log("Wtf");
+      // Hide Everything
       window.location.href = "endPage.html";
     }
     if(textIndex === -1){
@@ -216,7 +216,6 @@ jonContinueButton.addEventListener('click', () => {
     button2.innerHTML = choice2s[textIndex];
     button3.innerHTML = choice3s[textIndex];
  } else {
-    console.log(textIndex);
     if(textIndex === -4){
       topicText.innerHTML = instructionsPrompts[textIndex + 5];
     }
@@ -234,7 +233,6 @@ jonContinueButton.addEventListener('click', () => {
 
 
 function handleScore(color){
-  console.log('In Handle Score Function');
   tempScore = currentScore;
 
   if(color == 'red'){
@@ -268,10 +266,10 @@ const button1Click = () => {
   ethicsBar.innerHTML = `${currentScore}%`
   gsap.to(ethicsBar, { duration: 0.5, width: `${currentScore}%` });
   button1.style.border = `3px solid ${buttonReactions[textIndex]?.button1?.color || "none"}`;
-  button2.style.border = `1px solid black`
-  button3.style.border = `1px solid black`
+  button2.style.border = `1px solid black`;
+  button3.style.border = `1px solid black`;
 
-  handleScore(buttonReactions[textIndex]?.button1?.color)
+  handleScore(buttonReactions[textIndex]?.button1?.color);
 };
 
 const button2Click = () => {

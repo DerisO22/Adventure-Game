@@ -52,7 +52,6 @@ welcomeButton.addEventListener('click', () => {
     document.getElementById('typeText').innerHTML = "";
     textIndex++;
   }
-  console.log("CLICKED")
   if(!typing && textIndex != 3){
     typing = true;
     typeWriter();
