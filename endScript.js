@@ -60,8 +60,8 @@ function initParticle(i) {
   x = rand(canvas.a.width);
   y = rand(canvas.a.height);
   theta = angle(x, y, center[0], center[1]);
-  vx = Math.cos(theta) * 6; // Use Math.cos() here
-  vy = Math.sin(theta) * 6; // Use Math.sin() here
+  vx = Math.cos(theta) * 6;
+  vy = Math.sin(theta) * 6;
   life = 0;
   ttl = baseTTL + rand(rangeTTL);
   speed = baseSpeed + rand(rangeSpeed);
@@ -85,9 +85,9 @@ function updateParticle(i) {
 
   x = particleProps[i];
   y = particleProps[i2];
-  theta = angle(x, y, center[0], center[1]) + 0.75 * Math.PI / 2; // Use Math.PI here
-  vx = lerp(particleProps[i3], 2 * Math.cos(theta), 0.05); // Use Math.cos() here
-  vy = lerp(particleProps[i4], 2 * Math.sin(theta), 0.05); // Use Math.sin() here
+  theta = angle(x, y, center[0], center[1]) + 0.75 * Math.PI / 2; 
+  vx = lerp(particleProps[i3], 2 * Math.cos(theta), 0.05); 
+  vy = lerp(particleProps[i4], 2 * Math.sin(theta), 0.05); 
   life = particleProps[i5];
   ttl = particleProps[i6];
   speed = particleProps[i7];
