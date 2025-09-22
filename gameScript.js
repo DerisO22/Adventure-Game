@@ -45,19 +45,19 @@ if(pageNum == 0){
     // Start Game Transition
     startButton.addEventListener('click', () => {
         // 1. Grow animation:
-        startButton.style.transform = 'scale(100)'; // Increase size
+        startButton.style.transform = 'scale(100)'; 
         
         // 2. Delay before redirecting:
         setTimeout(() => {
         // 3. Redirect to next page:
-            window.location.href = "chooseCharPage.html"; // Replace with your next page
+            window.location.href = "chooseCharPage.html";
             pageNum == 1;
-        }, 500); // 500 milliseconds delay
+        }, 500); 
 
         // 4. Reset button size:
         setTimeout(() => {
-            startButton.style.transform = 'scale(1)'; // Reset size
-        }, 1000); // 1 second delay (after the redirect)
+            startButton.style.transform = 'scale(1)'; 
+        }, 1000); 
     });
 
     //Background Stuff
@@ -118,12 +118,12 @@ const circleSpeed = 2;
 let circles = [];
 // Function to create a new circle
 function createCircle() {
-  let r = Math.floor(Math.random() * 256); // Random value for red (0-255)
-  let g = Math.floor(Math.random() * 256); // Random value for green (0-255)
-  let b = Math.floor(Math.random() * 256); // Random value for blue (0-255)
+  let r = Math.floor(Math.random() * 256); 
+  let g = Math.floor(Math.random() * 256); 
+  let b = Math.floor(Math.random() * 256); 
 
   const x = Math.random() * canvas.width;
-  const y = Math.random() * -circleRadius; // Start off-screen
+  const y = Math.random() * -circleRadius; 
   return {
     x,
     y,
@@ -154,7 +154,7 @@ function update() {
     drawCircle(circle);
     return true;
   });
-  requestAnimationFrame(update); // Request the next frame
+  requestAnimationFrame(update);
 }
 // Spawn a new circle
 setInterval(() => {
